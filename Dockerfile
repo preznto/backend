@@ -1,4 +1,4 @@
-FROM openjdk:11-jdk
+FROM openjdk:17-jdk
 
 # 이미지 내부에 /app 디렉토리를 작업 디렉토리로 설정합니다.
 WORKDIR /app
