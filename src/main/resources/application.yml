@@ -1,0 +1,12 @@
+
+spring:
+  application:
+    name: buyformeAPI
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://prezento.cv2gecem8rxg.ap-northeast-2.rds.amazonaws.com:3306/prezento?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: admin
+    password: prezento1
+
+server:
+  port: 8081
