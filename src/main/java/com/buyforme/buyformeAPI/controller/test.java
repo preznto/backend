@@ -8,7 +8,7 @@ public class test {
 
     @GetMapping("/api")
     public String test() {
-        return "test2";
+        return "test22";
     }
 
 }
