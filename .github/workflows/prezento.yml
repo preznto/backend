@@ -52,8 +52,7 @@ jobs:
           port : 22
           script : |                                     #서버 셸스크립트 명령어 실행\
             echo "${{ secrets.APPLICATION_YML }}" | base64 --decode > /home/ubuntu/application.yml
-#           이쪽부터 수정 해야해 ~ 현익아~
-            sudo docker stop $(sudo docker ps -a -q)     
-            sudo docker rm $(sudo docker ps -a -q)       
+            sudo docker stop $(sudo docker ps -a -f "ancestor=hyunik/prezento -q)     
+            sudo docker rm $(sudo docker ps -a -f "ancestor=hyunik/prezento -q)       
             sudo docker pull hyunik/prezento      
             sudo docker run -d -p 8081:8081 -v /home/ubuntu/application.yml:/app/config/application.yml hyunik/prezento
